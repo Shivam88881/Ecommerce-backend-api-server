@@ -10,7 +10,7 @@ const cors = require('cors');
 
 
 const corsOptions = {
-    origin: 'https://ecommerce-backend-api-server.vercel.app/',
+    origin: 'https://65832b6c7e948f41c5d02fc1--celebrated-tanuki-54273a.netlify.app/',
     optionsSuccessStatus: 200
 };
 
