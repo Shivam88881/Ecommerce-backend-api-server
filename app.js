@@ -7,9 +7,7 @@ const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
 const cors = require('cors');
 
-//config
 
-dotenv.config({ path: "./config/config.env" });
 
 const corsOptions = {
     origin: 'https://ecommerce-backend-api-server.vercel.app/',
@@ -17,6 +15,10 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+
+//config
+
+dotenv.config({ path: "./config/config.env" });
 
 
 app.use(express.json());
