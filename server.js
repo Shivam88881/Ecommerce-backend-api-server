@@ -27,8 +27,13 @@ cloudinary.config({
 });
 
 
-// Enable CORS for all routes
-app.use(cors());
+const corsOptions = {
+    origin: 'http://localhost:3000',
+    optionsSuccessStatus: 200,
+    credentials: true,
+};
+
+app.use(cors(corsOptions));
 const port = process.env.PORT;
 
 
