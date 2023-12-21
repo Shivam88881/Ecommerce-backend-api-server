@@ -10,11 +10,12 @@ const cors = require('cors');
 
 
 const corsOptions = {
-    origin: 'https://65832b6c7e948f41c5d02fc1--celebrated-tanuki-54273a.netlify.app',
-    optionsSuccessStatus: 200
+    origin: 'http://localhost:3000',
+    optionsSuccessStatus: 200,
+    credentials: true,
 };
 
-app.use(cors());
+app.use(cors(corsOptions));
 
 //config
 
