@@ -17,8 +17,6 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-app.use(cors(corsOptions));
-
 //config
 
 dotenv.config({ path: "./config/config.env" });
