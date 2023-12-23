@@ -11,8 +11,11 @@ const cors = require('cors');
 
 const corsOptions = {
     origin: 'https://celebrated-tanuki-54273a.netlify.app',
-    credentials: true,
+    optionsSuccessStatus: 200,
+    Credential: true
 };
+
+app.use(cors(corsOptions));
 
 app.use(cors(corsOptions));
 
