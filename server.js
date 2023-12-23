@@ -26,6 +26,14 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
+const corsOptions = {
+    origin: 'https://celebrated-tanuki-54273a.netlify.app',
+    optionsSuccessStatus: 200,
+    Credential: true
+};
+
+app.use(cors(corsOptions));
+
 const port = process.env.PORT;
 
 
