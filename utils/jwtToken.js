@@ -10,6 +10,7 @@ const sendToken = (user,statusCode,res)=>{
           ),
           httpOnly:true,
           sameSite: 'None',
+          domain:'netlify',
           secure: process.env.NODE_ENV === 'production',
           
      };
