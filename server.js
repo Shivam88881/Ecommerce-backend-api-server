@@ -27,7 +27,7 @@ cloudinary.config({
 });
 
 const corsOptions = {
-    origin: 'https://celebrated-tanuki-54273a.netlify.app',
+    origin: '*',
     optionsSuccessStatus: 200,
     credentials: true  // Corrected property name
 };
