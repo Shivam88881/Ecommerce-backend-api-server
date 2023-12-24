@@ -13,7 +13,8 @@ const corsOptions = {
     origin: 'https://celebrated-tanuki-54273a.netlify.app',
     optionsSuccessStatus: 200,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true  // Corrected property name
+    credentials: true,
+    exposedHeaders: ["Set-Cookie"]
 };
 
 app.use(cors(corsOptions));
