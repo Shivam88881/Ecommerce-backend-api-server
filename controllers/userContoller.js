@@ -137,6 +137,7 @@ exports.resetPassword = tryCatchAsync(async (req, res, next) => {
 // Get User Detail
 
 exports.getProfileDetails = tryCatchAsync(async (req, res, next) => {
+    console.log(req);
     const user = await User.findOne({ _id: req.user.id }) //While login we have set user details into req.user..for more detail see auth.js in middleware folder
     res.status(200).json({
         success: true,
