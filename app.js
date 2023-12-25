@@ -10,7 +10,7 @@ const cors = require('cors');
 
 
 const corsOptions = {
-    origin: 'https://celebrated-tanuki-54273a.netlify.app',
+    origin: 'http:localhost:3000',
     optionsSuccessStatus: 200,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
