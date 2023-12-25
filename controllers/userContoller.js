@@ -12,6 +12,8 @@ const { use } = require("../routes/userRoute");
 
 exports.registerUser = tryCatchAsync(async (req, res, body) => {
 
+    console.log(req);
+
     const { name, email, username, password } = req.body;
 
     const user = await User.create({
