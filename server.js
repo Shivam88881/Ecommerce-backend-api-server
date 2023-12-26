@@ -27,7 +27,7 @@ cloudinary.config({
 });
 
 const corsOptions = {
-    origin: 'https://profound-palmier-c6775a.netlify.app',
+    origin: 'http://localhost:3000',
     optionsSuccessStatus: 200,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
