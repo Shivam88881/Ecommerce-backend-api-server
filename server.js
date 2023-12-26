@@ -27,7 +27,7 @@ cloudinary.config({
 });
 
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: 'https://regal-piroshki-c908ee.netlify.app',
     optionsSuccessStatus: 200,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
