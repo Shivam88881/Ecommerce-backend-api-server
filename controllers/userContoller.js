@@ -59,6 +59,7 @@ exports.loginUser = tryCatchAsync(async (req, res, next) => {
 
 exports.logout = tryCatchAsync(async (req, res, next) => {
 
+    const token = "";
     //options for cookie
      const options = {
           expires: new Date(0),
@@ -66,9 +67,10 @@ exports.logout = tryCatchAsync(async (req, res, next) => {
           httpOnly: true,
           secure: true,
      };
-    res.status(200).cookie("token", null,options).json({
+    res.status(200).cookie('token',token,options).json({
         success: true,
-        message: "User logged out successfully"
+        message: "User logged out successfully",
+        token
     })
 });
 
