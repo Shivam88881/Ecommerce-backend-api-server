@@ -58,21 +58,21 @@ exports.loginUser = tryCatchAsync(async (req, res, next) => {
 //Logout User
 
 exports.logout = tryCatchAsync(async (req, res, next) => {
+    // Options for cookie
+    const options = {
+        expires: new Date(0), // Set expires to a date in the past
+        sameSite: 'None',
+        httpOnly: true,
+        secure: true,
+    };
 
-    const token = "";
-    //options for cookie
-     const options = {
-          expires: new Date(0),
-          sameSite: 'None',
-          httpOnly: true,
-          secure: true,
-     };
-    res.status(200).cookie('token',token,options).json({
+    console.log("Setting token cookie to null");
+    res.status(200).cookie("token", null, options).json({
         success: true,
-        message: "User logged out successfully",
-        token
-    })
+        message: "User logged out successfully"
+    });
 });
+
 
 //Forgot Password
 
