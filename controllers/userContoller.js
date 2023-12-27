@@ -58,18 +58,18 @@ exports.loginUser = tryCatchAsync(async (req, res, next) => {
 //Logout User
 
 exports.logout = tryCatchAsync(async (req, res, next) => {
-    res.cookie("token", null, {
-        expires: new Date(Date.now()),
-        sameSite: 'None',
-        httpOnly: true,
-        secure: true,
-    });
 
-    res.status(200).json({
+    //options for cookie
+     const options = {
+          expires: new Date(0),
+          sameSite: 'None',
+          httpOnly: true,
+          secure: true,
+     };
+    res.status(200).cookie("token", null,options).json({
         success: true,
         message: "User logged out successfully"
     })
-
 });
 
 //Forgot Password
